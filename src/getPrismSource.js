@@ -1,6 +1,6 @@
 import "clipboard";
 import "prismjs/prism.js";
-import "prismjs/themes/prism-coy.css";
+import "prismjs/themes/prism-solarizedlight.css";
 import "prismjs/plugins/toolbar/prism-toolbar.css";
 import "prismjs/plugins/line-numbers/prism-line-numbers.css";
 import "prismjs/plugins/line-numbers/prism-line-numbers.js";
