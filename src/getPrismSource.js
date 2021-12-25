@@ -1,7 +1,9 @@
 import "clipboard";
 import "prismjs/prism.js";
+import "prismjs/themes/prism-tomorrow.css";
 import "prismjs/plugins/toolbar/prism-toolbar.css";
 import "prismjs/plugins/line-numbers/prism-line-numbers.css";
+import "prismjs/plugins/line-numbers/prism-line-numbers.js";
 import "prismjs/components/prism-json";
 import "prismjs/components/prism-javascript";
 import { themes, basicThemes } from "./utils/themes";
