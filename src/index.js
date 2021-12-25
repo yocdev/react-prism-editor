@@ -11,11 +11,11 @@ import { basicThemes } from "./utils/themes";
 import { basicLanguages } from "./utils/languages";
 import { plugins } from "./utils/plugins";
 import {
-  themesCss,
-  lineNumbersCss,
-  languagesJs,
-  pluginsJs,
-  prismJs,
+  // themesCss,
+  // lineNumbersCss,
+  // languagesJs,
+  // pluginsJs,
+  // prismJs,
   addCssParent,
 } from "./getPrismSource";
 
@@ -373,33 +373,33 @@ class Editor extends React.Component {
   }
 
   setThemeStyle(theme) {
-    this.addElement(
-      "style",
-      theme,
-      addCssParent(`.module-theme-${theme}`, themesCss[theme])
-    );
+    // this.addElement(
+    //   "style",
+    //   theme,
+    //   addCssParent(`.module-theme-${theme}`, themesCss[theme])
+    // );
   }
 
   setLineNumbersStyle(theme) {
-    this.addElement(
-      "style",
-      `${theme}-lineNumbers`,
-      addCssParent(`.module-theme-${theme}`, lineNumbersCss)
-    );
+    // this.addElement(
+    //   "style",
+    //   `${theme}-lineNumbers`,
+    //   addCssParent(`.module-theme-${theme}`, lineNumbersCss)
+    // );
   }
 
   setPrismScript() {
-    this.addElement("script", "prism", prismJs);
+    // this.addElement("script", "prism", prismJs);
   }
 
   setPluginsScript() {
-    Array.from(new Set(plugins.map((item) => item.value))).forEach((item) => {
-      this.addElement("script", item, pluginsJs[item]);
-    });
+    // Array.from(new Set(plugins.map((item) => item.value))).forEach((item) => {
+    //   this.addElement("script", item, pluginsJs[item]);
+    // });
   }
 
   setLanguageScript(language) {
-    this.addElement("script", `${language}-language`, languagesJs[language]);
+    // this.addElement("script", `${language}-language`, languagesJs[language]);
     // this.Prism.language = window.Prism.language
     // console.log(this.Prism)
   }

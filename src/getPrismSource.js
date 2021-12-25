@@ -1,5 +1,9 @@
 import "clipboard";
+import "prismjs/prism.js";
 import "prismjs/plugins/toolbar/prism-toolbar.css";
+import "prismjs/plugins/line-numbers/prism-line-numbers.css";
+import "prismjs/components/prism-json";
+import "prismjs/components/prism-javascript";
 import { themes, basicThemes } from "./utils/themes";
 import { languages, basicLanguages } from "./utils/languages";
 import { plugins, basicPlugins } from "./utils/plugins";
@@ -42,50 +46,50 @@ export const addCssParent = (parentSelector, cssStr) => {
   return cssStr;
 };
 
-const themesCss = {};
-themes.forEach(({ title, srcName }) => {
-  // themesCss[title] = require(`!!raw-loader!prismjs/themes/${srcName}.css`).default
-  themesCss[title] = import(`prismjs/themes/${srcName}.css?raw`);
-});
+// const themesCss = {};
+// themes.forEach(({ title, srcName }) => {
+//   // themesCss[title] = require(`!!raw-loader!prismjs/themes/${srcName}.css`).default
+//   themesCss[title] = import(`prismjs/themes/${srcName}.css?raw`);
+// });
 
-const languagesJs = {};
-basicLanguages.forEach((item) => {
-  //   languagesJs[item] = require(`!!raw-loader!prismjs/components/prism-${
-  //     ["html", "vue", "angular", "xml"].includes(item) ? "markup" : item
-  //   }.min.js`).default;
+// const languagesJs = {};
+// basicLanguages.forEach((item) => {
+//   //   languagesJs[item] = require(`!!raw-loader!prismjs/components/prism-${
+//   //     ["html", "vue", "angular", "xml"].includes(item) ? "markup" : item
+//   //   }.min.js`).default;
 
-  languagesJs[item] = import(
-    `prismjs/components/prism-${
-      ["html", "vue", "angular", "xml"].includes(item) ? "markup" : item
-    }.min.js?raw`
-  );
-});
+//   languagesJs[item] = import(
+//     `prismjs/components/prism-${
+//       ["html", "vue", "angular", "xml"].includes(item) ? "markup" : item
+//     }.min.js?raw`
+//   );
+// });
 
-const pluginsJs = {};
-// const pluginsCss = []
-basicPlugins.forEach((item) => {
-  if (item === "copy-to-clipboard") {
-    //修改逻辑，让每次修改后都能拿到最新的值
-    // pluginsJs[item] = require(`!!raw-loader!./prism-${item}.js`).default;
-    //pluginsJs[item] = require(`!!raw-loader!prismjs/plugins/${item}/prism-${item}.js`).default
-    pluginsJs[item] = import(`prism-${item}.js?raw`);
-  } else {
-    // pluginsJs[item] =
-    //   require(`!!raw-loader!prismjs/plugins/${item}/prism-${item}.min.js`).default;
+// const pluginsJs = {};
+// // const pluginsCss = []
+// basicPlugins.forEach((item) => {
+//   if (item === "copy-to-clipboard") {
+//     //修改逻辑，让每次修改后都能拿到最新的值
+//     // pluginsJs[item] = require(`!!raw-loader!./prism-${item}.js`).default;
+//     //pluginsJs[item] = require(`!!raw-loader!prismjs/plugins/${item}/prism-${item}.js`).default
+//     pluginsJs[item] = import(`prism-${item}.js?raw`);
+//   } else {
+//     // pluginsJs[item] =
+//     //   require(`!!raw-loader!prismjs/plugins/${item}/prism-${item}.min.js`).default;
 
-    pluginJs[item] = import(`prismjs/plugins/${item}/prism-${item}.min.js?raw`);
-  }
-});
+//     pluginJs[item] = import(`prismjs/plugins/${item}/prism-${item}.min.js?raw`);
+//   }
+// });
 
 // const lineNumbersCss =
 //   require(`!!raw-loader!prismjs/plugins/line-numbers/prism-line-numbers.css`).default;
 
-const lineNumbersCss = import(
-  "prismjs/plugins/line-numbers/prism-line-numbers.css?raw"
-);
+// const lineNumbersCss = import(
+//   "prismjs/plugins/line-numbers/prism-line-numbers.css?raw"
+// );
 
 // const prismJs = require(`!!raw-loader!prismjs/prism.js`).default;
 
-const prismJs = import("prismjs/prism.js?raw");
+// const prismJs = import("prismjs/prism.js?raw");
 
-export { themesCss, lineNumbersCss, languagesJs, pluginsJs, prismJs };
+// export { themesCss, lineNumbersCss, languagesJs, pluginsJs, prismJs };
