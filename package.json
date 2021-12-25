@@ -1,6 +1,6 @@
 {
   "name": "@yocdev/react-prism-editor",
-  "version": "1.1.1-alpha.0",
+  "version": "1.1.2-alpha",
   "description": "React prism editor with theme,line-numbers,copy to dashboard",
   "main": "es/index.js",
   "files": [
@@ -37,14 +37,6 @@
     "react-dom": "^16.13.1"
   },
   "author": "yocdev",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/lumia2046/react-prism-editor.git"
-  },
-  "bugs": {
-    "url": "https://github.com/lumia2046/react-prism-editor/issues"
-  },
-  "homepage": "https://lumia2046.github.io/react-prism-editor/",
   "license": "MIT",
   "keywords": [
     "prismjs",
